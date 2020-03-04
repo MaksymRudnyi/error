@@ -2,8 +2,12 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 
+import ErrorBoundary from './ErrorBoundary';
+import BuggyCounter from './comp';
+
 function App() {
   return (
+      <ErrorBoundary>
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
@@ -18,8 +22,10 @@ function App() {
         >
           Learn React
         </a>
+        <BuggyCounter/>
       </header>
     </div>
+      </ErrorBoundary>
   );
 }
 
